@@ -1,12 +1,14 @@
-package com.pluralsight;
+package com.pluralsight.user;
 
-import com.pluralsight.contracts.LeaseContractDao;
-import com.pluralsight.contracts.SalesContractDao;
+import com.pluralsight.daos.LeaseContractDao;
+import com.pluralsight.daos.SalesContractDao;
+import com.pluralsight.daos.VehicleDao;
+import com.pluralsight.objects.Vehicle;
 
 import java.util.List;
 import java.util.Scanner;
 
-import static com.pluralsight.VehicleInput.getNumberChoice;
+import static com.pluralsight.inputManager.VehicleInput.getNumberChoice;
 import static java.lang.System.out;
 
 public class UserInterface {

@@ -1,6 +1,5 @@
-package com.pluralsight;
+package com.pluralsight.objects;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Dealership {

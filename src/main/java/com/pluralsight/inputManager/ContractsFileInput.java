@@ -1,8 +1,8 @@
-package com.pluralsight.fileManager;
+package com.pluralsight.inputManager;
 
 import java.util.Scanner;
 
-public class ContractsFileManager {
+public class ContractsFileInput {
     private static Scanner scanner = new Scanner(System.in);
 
     public static String addSalesContract(){

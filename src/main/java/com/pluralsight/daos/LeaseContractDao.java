@@ -1,6 +1,6 @@
-package com.pluralsight.contracts;
+package com.pluralsight.daos;
 
-import com.pluralsight.fileManager.ContractsFileManager;
+import com.pluralsight.inputManager.ContractsFileInput;
 
 import javax.sql.DataSource;
 import java.sql.*;
@@ -18,7 +18,7 @@ public class LeaseContractDao {
         try (Connection connection = dataSource.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO leaseContracts (VIN, Date) VALUES (?, ?);", Statement.RETURN_GENERATED_KEYS);) {
 
-            preparedStatement.setString(1, ContractsFileManager.addLeaseContract());
+            preparedStatement.setString(1, ContractsFileInput.addLeaseContract());
             preparedStatement.setDate(2, Date.valueOf(LocalDate.now()));
 
             int rows = preparedStatement.executeUpdate();

@@ -1,4 +1,7 @@
-package com.pluralsight;
+package com.pluralsight.daos;
+
+import com.pluralsight.objects.Vehicle;
+import com.pluralsight.inputManager.VehicleInput;
 
 import javax.sql.DataSource;
 import java.sql.*;

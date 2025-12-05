@@ -1,10 +1,11 @@
-package com.pluralsight;
+package com.pluralsight.user;
 
-import com.pluralsight.contracts.LeaseContractDao;
-import com.pluralsight.contracts.SalesContractDao;
+import com.pluralsight.daos.LeaseContractDao;
+import com.pluralsight.daos.SalesContractDao;
+import com.pluralsight.daos.VehicleDao;
 import org.apache.commons.dbcp2.BasicDataSource;
 
-import static com.pluralsight.UserInterface.homeScreen;
+import static com.pluralsight.user.UserInterface.homeScreen;
 
 public class Program {
     public static void main(String[] args) {
