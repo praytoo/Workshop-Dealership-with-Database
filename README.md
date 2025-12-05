@@ -10,9 +10,9 @@ This project replaces file-based persistence with full **CRUD database operation
 - [Tech Stack](#-tech-stack)
 - [Project Structure](#-project-structure)
 - [Features](#-features)
-- [Run Instructions](#run-instructions)
-- [Screenshots](#screenshots)
-- [Interesting Code Snippet](#interesting-code-snippet)
+- [Run Instructions](#-run-instructions)
+- [Screenshots](#-screenshots)
+- [Interesting Code Snippet](#-interesting-code-snippet)
 - [Author](#-author)
 
 ---
