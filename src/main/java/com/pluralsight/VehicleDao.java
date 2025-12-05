@@ -32,21 +32,15 @@ public class VehicleDao {
 
             try (ResultSet keys = preparedStatement.getGeneratedKeys();) {
 
-                boolean results = false;
                 while (keys.next()) {
-                    results = true;
                     System.out.println("Keys added: " + keys.getInt(1));
                     return keys.getInt(1);
-                }if (!results){
-                    System.out.println("No results were found");
+                    }
                 }
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        return -1;
+        return 1;
     }
 
     public int vehicleDelete() {
@@ -62,7 +56,7 @@ public class VehicleDao {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        return -1;
+        return 1;
     }
 
     public List<Vehicle> searchByPriceRange() {
