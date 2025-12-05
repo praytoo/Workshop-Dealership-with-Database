@@ -1,5 +1,6 @@
 package com.pluralsight.user;
 
+import com.pluralsight.daos.CartDao;
 import com.pluralsight.daos.LeaseContractDao;
 import com.pluralsight.daos.SalesContractDao;
 import com.pluralsight.daos.VehicleDao;
@@ -17,11 +18,12 @@ public class Program {
         VehicleDao dataManager = new VehicleDao(dataSource);
         SalesContractDao dataManager1 = new SalesContractDao(dataSource);
         LeaseContractDao dataManager2 = new LeaseContractDao(dataSource);
+        CartDao dataManager4 = new CartDao(dataSource);
 
 
         boolean endProgram = false;
         while (!endProgram) {
-            endProgram = homeScreen(dataManager, dataManager1, dataManager2);
+            endProgram = homeScreen(dataManager, dataManager1, dataManager2, dataManager4);
         }
     }
 }

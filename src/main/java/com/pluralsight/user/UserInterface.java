@@ -1,5 +1,6 @@
 package com.pluralsight.user;
 
+import com.pluralsight.daos.CartDao;
 import com.pluralsight.daos.LeaseContractDao;
 import com.pluralsight.daos.SalesContractDao;
 import com.pluralsight.daos.VehicleDao;
@@ -20,7 +21,7 @@ public class UserInterface {
     public UserInterface() {
     }
 
-    public static boolean homeScreen(VehicleDao dataManager, SalesContractDao dataManager2, LeaseContractDao dataManager3) {
+    public static boolean homeScreen(VehicleDao dataManager, SalesContractDao dataManager2, LeaseContractDao dataManager3, CartDao dataManager4) {
         String options = ("""
                 What do you want to do?
                  1) Add a vehicle
@@ -91,15 +92,15 @@ public class UserInterface {
                 System.out.println(leaseContract2);
                 break;
             case 13:
-                int addCart = dataManager.addCart();
+                int addCart = dataManager4.addCart();
                 System.out.println(addCart);
                 break;
             case 14:
-                int deleteCart = dataManager.deleteCart();
+                int deleteCart = dataManager4.deleteCart();
                 System.out.println(deleteCart);
                 break;
             case 15:
-                List<Cart> viewCart = dataManager.viewCart();
+                List<Cart> viewCart = dataManager4.viewCart();
                 System.out.println(viewCart);
                 break;
             case 0:
