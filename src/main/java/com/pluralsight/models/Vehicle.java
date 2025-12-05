@@ -1,4 +1,4 @@
-package com.pluralsight.objects;
+package com.pluralsight.models;
 
 public class Vehicle {
     private int vin;
@@ -11,6 +11,9 @@ public class Vehicle {
     private double price;
     private boolean sold;
 
+    public Vehicle(int vin) {
+    }
+
     @Override
     public String toString() {
         return "Vehicle: " +  "\n" +
@@ -22,7 +25,7 @@ public class Vehicle {
                 "color = " + color + "\n" +
                 "odometer = " + odometer + "\n" +
                 "price = " + price + "\n" +
-                "sold = " + sold;
+                "sold = " + sold + "-------\n";
     }
 
     public Vehicle(int vin, int year, String make, String model, String vehicleType, String color, int odometer, double price, boolean sold) {

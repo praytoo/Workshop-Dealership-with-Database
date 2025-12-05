@@ -3,7 +3,10 @@ package com.pluralsight.user;
 import com.pluralsight.daos.LeaseContractDao;
 import com.pluralsight.daos.SalesContractDao;
 import com.pluralsight.daos.VehicleDao;
-import com.pluralsight.objects.Vehicle;
+import com.pluralsight.models.Cart;
+import com.pluralsight.models.LeaseContract;
+import com.pluralsight.models.SalesContract;
+import com.pluralsight.models.Vehicle;
 
 import java.util.List;
 import java.util.Scanner;
@@ -30,6 +33,11 @@ public class UserInterface {
                  8) Search by type
                  9) Sell a vehicle
                  10) Lease a vehicle
+                 11) View sale information
+                 12) View lease information
+                 13) Add to cart
+                 14) Delete from cart
+                 15) View cart
                  0) Exit
                 Select an option:
                 """);
@@ -73,6 +81,26 @@ public class UserInterface {
             case 10:
                 int leaseContract = LeaseContractDao.addLeaseContract();
                 out.println(leaseContract);
+                break;
+            case 11:
+                List<SalesContract> salesContract2 = dataManager2.displaySalesContract();
+                System.out.println(salesContract2);
+                break;
+            case 12:
+                List<LeaseContract> leaseContract2 = dataManager3.displayLeaseContract();
+                System.out.println(leaseContract2);
+                break;
+            case 13:
+                int addCart = dataManager.addCart();
+                System.out.println(addCart);
+                break;
+            case 14:
+                int deleteCart = dataManager.deleteCart();
+                System.out.println(deleteCart);
+                break;
+            case 15:
+                List<Cart> viewCart = dataManager.viewCart();
+                System.out.println(viewCart);
                 break;
             case 0:
                 System.exit(0);

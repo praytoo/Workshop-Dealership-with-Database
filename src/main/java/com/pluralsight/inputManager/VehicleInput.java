@@ -107,6 +107,16 @@ public class VehicleInput {
         System.out.println(input);
         return scanner.nextLine();
     }
+    public static int addVehicleToCart(){
+        String input = ("What is the vin of the car you wish to add to your cart?");
+        System.out.println(input);
+        return Integer.parseInt(scanner.nextLine());
+    }
+    public static int deleteVehicleFromCart(){
+        String input = ("What is the vin of the car you wish to delete from your cart?");
+        System.out.println(input);
+        return Integer.parseInt(scanner.nextLine());
+    }
 
         public static int getNumberChoice(String options) {
             out.println(options);

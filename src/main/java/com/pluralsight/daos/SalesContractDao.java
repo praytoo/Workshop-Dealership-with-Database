@@ -1,10 +1,13 @@
 package com.pluralsight.daos;
 
 import com.pluralsight.inputManager.ContractsFileInput;
+import com.pluralsight.models.SalesContract;
 
 import javax.sql.DataSource;
 import java.sql.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SalesContractDao {
     private static DataSource dataSource;
@@ -42,5 +45,25 @@ public class SalesContractDao {
         }
         return -1;
     }
+    public List<SalesContract> displaySalesContract() {
+        List<SalesContract> sContract = new ArrayList<>();
+        try (Connection connection = dataSource.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement("SELECT salesID, VIN, date FROM salescontracts;");
 
+             ResultSet resultSet = preparedStatement.executeQuery();) {
+
+            while (resultSet.next()) {
+                int sales_id = resultSet.getInt("salesID");
+                int vin = resultSet.getInt("vin");
+                Date date = resultSet.getDate("date");
+
+                SalesContract salesContract = new SalesContract(sales_id, vin, date);
+                sContract.add(salesContract);
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return sContract;
+    }
 }

@@ -1,7 +1,7 @@
 package com.pluralsight;
 
-import com.pluralsight.objects.Dealership;
-import com.pluralsight.objects.Vehicle;
+import com.pluralsight.models.Dealership;
+import com.pluralsight.models.Vehicle;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
